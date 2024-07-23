@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(30, 84, 177); */
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 40%, rgba(0, 212, 255, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.universe {
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        animation-name: skychange;
+        animation-duration: 10s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    & .sun {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #e25e3e;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        &:hover {
+            &::after {
+                content: "";
+                width: inherit;
+                aspect-ratio: 1;
+                background-color: black;
+                position: absolute;
+                border-radius: inherit;
+                animation-name: ecllipse;
+                animation-duration: 10s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+}
+
+/* Animation to transform moon(::after). */
+@keyframes ecllipse {
+    0% {
+        translate: 100%;
+        scale: 1;
+    }
+
+    50% {
+        translate: 0%;
+        scale: 0.95;
+        box-shadow: rgba(255, 255, 255, 0.5) 0px 48px 100px 0px;
+    }
+
+    100% {
+        translate: -100%;
+        scale: 0.95;
+    }
+
+}
+
+/* Animation to change universe background. */
+@keyframes skychange {
+    0% {
+        background-color: orange;
+    }
+
+    25% {
+        background-color: orange;
+    }
+
+    50% {
+        background-color: black;
+    }
+
+    75% {
+        background-color: orange;
+    }
+
+    100% {
+        background-color: orange;
+    }
+}

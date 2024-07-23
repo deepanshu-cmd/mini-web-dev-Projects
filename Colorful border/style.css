@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to right,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(9, 121, 120, 1) 43%,
+            rgba(0, 212, 255, 1) 100%);
+}
+
+.btn {
+    padding: 1.5rem 3rem;
+    background-color: black;
+    color: #bababa;
+    border: 3px solid;
+    border-image: linear-gradient(to right,
+            rgba(33, 22, 215, 1),
+            rgba(244, 23, 83, 1) 43%);
+    border-image-slice: 1;
+    /*  We can't use border radius property coz of border-image-slice.  */
+    letter-spacing: 0.1rem;
+
+    &:hover {
+        padding: 1.6rem 3.1rem;
+        color: white;
+        border-image: linear-gradient(to left,
+                rgba(33, 22, 215, 1),
+                rgba(244, 23, 83, 1) 43%) 1;
+    }
+}

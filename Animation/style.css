@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(244, 233, 233);
+    display: grid;
+    place-items: center;
+
+    & .box {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        background-color: rgb(244, 233, 233);
+        border-top: 8px solid black;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+        animation: rotate 1s linear 0s infinite ;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}

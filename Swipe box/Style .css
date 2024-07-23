@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(31, 35, 42);
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 50rem;
+    height: 50rem;
+    background-color: aquamarine;
+    position: relative;
+    z-index: 4;
+
+    & .box {
+        width: 10rem;
+        height: 10rem;
+        background-color: brown;
+        border: 4px solid black;
+        position: relative;
+        left: 10rem;
+        top: 10rem;
+        transition: all 1s linear;
+        z-index: 3;
+
+        &.box:hover {
+            transform: translateX(20rem);
+        }
+    }
+
+    & .box_2 {
+        width: 10rem;
+        height: 10rem;
+        background-color: rgb(196, 1, 255);
+        border: 4px solid black;
+        position: relative;
+        left: 10rem;
+        z-index: 2;
+    }
+}

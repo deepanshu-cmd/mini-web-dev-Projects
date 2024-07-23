@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #0f2719, #2c4320, #5b642c);
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 40%;
+    aspect-ratio: 1;
+    border: 4px solid black;
+    background: linear-gradient(to right, #1fcd67, #55cf13, #8fa713);
+    display: grid;
+    place-items: center;
+}
+
+.box {
+    width: 30%;
+    aspect-ratio: 1;
+    border: 4px solid black;
+    background: linear-gradient(to right, #086830, #386706, #796d04);
+}

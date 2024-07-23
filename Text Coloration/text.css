@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(28, 39, 72);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 10rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+
+    &::before {
+        content: "Subscribe...";
+        position: absolute;
+        color: orange;
+        border-right: 2px solid orange;
+        text-transform: uppercase;
+        overflow: hidden;
+        width: 100%;
+        animation-name: swipe;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+}
+
+
+@keyframes swipe {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
