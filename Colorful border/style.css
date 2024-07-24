@@ -28,7 +28,7 @@ body {
             rgba(33, 22, 215, 1),
             rgba(244, 23, 83, 1) 43%);
     border-image-slice: 1;
-    /*  We can't use border radius property coz of border-image-slice.  */
+    /**  We can't use border radius property coz of border-image-slice.  **/
     letter-spacing: 0.1rem;
 
     &:hover {

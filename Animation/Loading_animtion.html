@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading animation</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        span {
+            display: inline-block;
+            width: 4rem;
+            height: 4rem;
+            background-color: #808080;
+            border-radius: 50%;
+            animation: expand 1s ease-in-out 0s infinite alternate;
+        }
+
+        @keyframes expand {
+            0% {
+                background-color: #808080;
+            }
+
+            100% {
+                transform: scale(1.1);
+                /* height: 4.1rem; */
+                background-color: #aeaeae;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <span class="box_1"></span>
+    <span class="box_2"></span>
+    <span class="box_3"></span>
+</body>
+
+</html>
