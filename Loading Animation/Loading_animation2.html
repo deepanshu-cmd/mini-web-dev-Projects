@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loading Animation 2</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        :root {
+            --bg-color: #010e24;
+            --cont-color: #0f1724;
+            --box1-color: #fc3503;
+            --box2-color: #fc9803;
+            --box3-color: #0f03fc;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-color);
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+            width: 50rem;
+            height: 10rem;
+            background-color: var(--cont-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.4rem;
+
+            & .box {
+                width: 5rem;
+                height: 5rem;
+                animation: rotate 2s ease-in-out infinite;
+            }
+
+            & .box1 {
+                background-color: var(--box1-color);
+            }
+
+            & .box2 {
+                background-color: var(--box2-color);
+            }
+
+            & .box3 {
+                background-color: var(--box3-color);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(-45deg);
+            }
+
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+</body>
+
+</html>

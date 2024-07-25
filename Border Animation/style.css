@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --bg-color: #191919;
+    --box-color: #323232;
+    --text-color: #f4f3f2;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: grid;
+    place-items: center;
+}
+
+a {
+    text-decoration-line: none;
+    -moz-text-decoration-line: none;
+
+    & .box {
+        width: 40rem;
+        height: 10rem;
+        background-color: var(--box-color);
+        display: grid;
+        place-items: center;
+        font-size: 5rem;
+        color: var(--text-color);
+        border: 2px solid;
+        border-image: conic-gradient(from var(--angle),
+                red,
+                orange,
+                yellow,
+                green,
+                blue,
+                indigo,
+                violet,
+                red) 1;
+        animation: slide 2s linear infinite;
+    }
+}
+
+@keyframes slide {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}

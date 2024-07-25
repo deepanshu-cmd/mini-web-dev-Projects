@@ -1,0 +1,84 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #171717;
+    display: grid;
+    place-items: center;
+}
+
+/*@ NOTE: Animation won't work on variables it only shows it effect on properties that's why we used below code.  */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.container {
+    width: 30rem;
+    height: 30rem;
+    background-color: #1c1f2b;
+    text-align: center;
+    padding: 1.6rem;
+    border-radius: 0.8rem;
+    position: relative;
+
+    & h1 {
+        color: #ffffff;
+        padding: 1rem;
+    }
+
+    & p {
+        color: #bababa;
+    }
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /*     --angle:0deg; */
+        background-image: conic-gradient(from var(--angle),
+                violet,
+                indigo,
+                blue,
+                green,
+                yellow,
+                orange,
+                red,
+                violet);
+        /*         background-image: conic-gradient(from var(--angle), transparent 70%, blue); */
+        border-radius: inherit;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+        padding: 0.3rem;
+        animation: spin 2s linear infinite;
+    }
+
+    &::before {
+        filter: blur(2.5rem);
+        opacity: 0.5;
+    }
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
