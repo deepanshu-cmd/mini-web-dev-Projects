@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    :root {
+        --box1-color: #030200;
+        --box2-color: #ff0000;
+        --box3-color: #0015ff;
+        --box4-color: #fbff00;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .box {
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+    }
+
+    .box1 {
+        width: 60rem;
+        height: 60rem;
+        background-color: var(--box1-color);
+
+        & .box2 {
+            width: 48rem;
+            height: 48rem;
+            background-color: var(--box2-color);
+
+            & .box3 {
+                width: 35rem;
+                height: 35rem;
+                background-color: var(--box3-color);
+
+                & .box4 {
+                    width: 20rem;
+                    height: 20rem;
+                    background-color: var(--box4-color);
+                }
+            }
+        }
+    }
+</style>
+
+<body>
+    <div class="box box1">
+        <div class="box box2">
+            <div class="box box3">
+                <div class="box box4"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
