@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Navbar</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background: #000000;
+        }
+
+        @property --angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        header {
+            width: 100%;
+            height: 10%;
+            background: #191970;
+
+            & .navbar {
+                width: 100%;
+                height: 100%;
+                border: 2px solid;
+                border-image: conic-gradient(from var(--angle),
+                        red,
+                        orange,
+                        yellow,
+                        green,
+                        blue,
+                        indigo,
+                        violet,
+                        red) 1;
+
+                &:hover {
+                    animation: rotate 1.5s linear infinite;
+                }
+
+                & ul {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    & li {
+                        display: inline-block;
+                        position: relative;
+                        color: #ffffff;
+                        font-size: 1.8rem;
+                        font-family: "Roboto", sans-serif;
+                        font-style: normal;
+
+                        &::after {
+                            content: "";
+                            width: 0%;
+                            height: 0%;
+                            position: absolute;
+                            left: 0rem;
+                            bottom: 0rem;
+                            border-bottom: 2px solid white;
+                            border-image: linear-gradient(90deg,
+                                    rgba(33, 22, 215, 1) 0%,
+                                    rgba(244, 23, 83, 1) 43%,
+                                    rgba(0, 212, 255, 1) 100%) 1;
+                            transition: all 0.3s linear;
+                        }
+
+                        &:hover:after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                --angle: 0deg;
+            }
+
+            to {
+                --angle: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blogs</li>
+                <li>Media</li>
+                <li>Contacts</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
