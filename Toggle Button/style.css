@@ -20,19 +20,32 @@ body {
 .switch {
     width: 30rem;
     height: 10rem;
-    background: #808080;
+    background: #fff;
     border-radius: 5.8rem;
     position: relative;
     transition: all 0.3s linear;
 
-    &::after {
+
+    &::before {
         content: "";
         position: absolute;
         width: 9rem;
         height: 9rem;
         border-radius: 50%;
         margin: 0.5rem;
-        background: #fff;
+        background: #000;
+        transition: all 0.3s linear;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -41rem;
+        left: -81rem;
+        width: 100vw;
+        height: 100vh;
+        background-color: transparent;
+        z-index: -1;
         transition: all 0.3s linear;
     }
 
@@ -47,11 +60,16 @@ input[type="checkbox"] {
     &:checked {
 
         &+.switch {
-            background: orange;
+            background: #000;
+        }
+
+        &+.switch:before {
+            translate: 20rem;
+            background: #fff;
         }
 
         &+.switch:after {
-            translate: 20rem;
+            background-color: #fff;
         }
     }
 
