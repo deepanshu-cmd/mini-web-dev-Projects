@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: hsl(47, 88%, 63%);
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    width: 35rem;
+    height: 50rem;
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-shadow: 8px 7px 2px #000;
+    border: 1px solid #000;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+
+    & .card_image {
+        width: 30.5rem;
+        height: 20rem;
+        background: url(/Challange2/assets/images/illustration-article.svg);
+        background-size: cover;
+        position: relative;
+        left: 2.25rem;
+        top: 2.25rem;
+        border-radius: 1.5rem;
+        -webkit-border-radius: 1.5rem;
+        -moz-border-radius: 1.5rem;
+        -ms-border-radius: 1.5rem;
+        -o-border-radius: 1.5rem;
+    }
+
+    & .box {
+        width: 7rem;
+        height: 2.7rem;
+        font-size: 1.4rem;
+        font-weight: 800;
+        background: hsl(47, 88%, 63%);
+        display: grid;
+        place-items: center;
+        position: relative;
+        left: 2.25rem;
+        top: 4rem;
+        border-radius: 0.3rem;
+        -webkit-border-radius: 0.3rem;
+        -moz-border-radius: 0.3rem;
+        -ms-border-radius: 0.3rem;
+        -o-border-radius: 0.3rem;
+    }
+
+    & .text {
+        width: 100%;
+        height: 2rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #000;
+        position: relative;
+        left: 2.25rem;
+        top: 5rem;
+    }
+
+    & .heading {
+        width: 100%;
+        height: 4rem;
+        color: hsl(0, 0%, 7%);
+        font-weight: 800;
+        position: relative;
+        left: 2.25rem;
+        top: 6rem;
+    }
+
+    & .para {
+        width: 30rem;
+        height: 20rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: hsl(0, 0%, 42%);
+        position: relative;
+        left: 2.25rem;
+        top: 6rem;
+    }
+
+    & .author {
+        width: 100%;
+        display: flex;
+        position: relative;
+        left: 2.25rem;
+        bottom: 7rem;
+
+        & .author_image {
+            width: 5rem;
+            height: 5rem;
+            background: url(/Challange2/assets/images/main-qimg-a88bdadaaf05e725e052c982da878db7-lq.jpeg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+
+        & .author_name {
+            position: relative;
+            left: 1rem;
+            top: 2rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: hsl(0, 0%, 7%);
+        }
+    }
+}
